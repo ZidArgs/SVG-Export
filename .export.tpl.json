@@ -1,0 +1,42 @@
+[
+    {
+        "sourceFiles": [
+            "./source.svg"
+        ],
+        "targetFolder": "./export",
+        "outputFilename": "${basename}_${size}.${type}",
+        "outputFileType": "png",
+        "outputSizes": [
+            {
+                "w": 1000,
+                "h": 1000
+            }
+        ]
+    },
+    {
+        "sourceFiles": [
+            "./source.svg"
+        ],
+        "targetFolder": "./export",
+        "outputFilename": "${basename}_${size}.${type}",
+        "outputFileType": "svg",
+        "outputSizes": {
+            "textToPath": true
+        }
+    },
+    {
+        "sourceFiles": "./source.svg",
+        "targetFolder": "./export",
+        "textIteration": {
+            "token": "[name]",
+            "texts": [
+                "ZidArgs",
+                "IkutoHitoshi"
+            ]
+        },
+        "outputFileType": "svg",
+        "options": {
+            "textToPath": true
+        }
+    }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "svg",
+  "version": "0.0.1",
+  "description": "emotes for tashatales",
+  "author": "Denis Weiß (ZidArgs)",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/zidargs/ufc-svg.git"
+  },
+  "homepage": "https://bitbucket.org/zidargs/ufc-svg/src",
+  "main": "convert.js",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.16.10",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-syntax-top-level-await": "^7.14.5",
+    "@babel/plugin-syntax-import-assertions": "^7.17.12",
+    "eslint": "^8.0.0"
+  },
+  "scripts": {
+    "lint": "yarn eslint .",
+    "lintfix": "yarn eslint --fix .",
+    "export": "node svg_export.js"
+  }
+}

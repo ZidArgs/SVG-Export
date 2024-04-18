@@ -1,0 +1,7 @@
+{
+    "inkscapePath": "%INKSCAPE_PATH%",
+    "targetFolder": "./export",
+    "outputFilename": "${basename}_${size}",
+    "outputFileType": "png",
+    "silenceIgnored": false
+}
