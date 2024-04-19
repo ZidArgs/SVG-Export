@@ -218,6 +218,7 @@ async function convertFiles(currentPath, sources, targetPath, outputFilename, ty
 async function convertWithTextIteration(sourcePath, targetPath, type, sizes, textIteration, options) {
     const {token, texts} = textIteration;
     if (typeof token === "string" && Array.isArray(texts)) {
+        const tokenRegExp = new RegExp(token, "g");
         const sourceStat = fs.lstatSync(sourcePath);
         const srcMTime = sourceStat.mtime.valueOf();
         const content = fs.readFileSync(sourcePath).toString();
@@ -238,7 +239,7 @@ async function convertWithTextIteration(sourcePath, targetPath, type, sizes, tex
                 }
             }
 
-            const newContent = content.replace(token, text);
+            const newContent = content.replace(tokenRegExp, text);
 
             const tmpPath = path.join(targetPath, `${basename}.${text}.${type}.tmp`);
             fs.writeFileSync(tmpPath, newContent);
