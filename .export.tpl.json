@@ -14,13 +14,18 @@
         ]
     },
     {
+        "sourceFiles": "*",
+        "outputFilename": "${basename}",
+        "outputFileType": "svg"
+    },
+    {
         "sourceFiles": [
             "./source.svg"
         ],
         "targetFolder": "./export",
-        "outputFilename": "${basename}_${size}.${type}",
+        "outputFilename": "${basename}.yay.${type}",
         "outputFileType": "svg",
-        "outputSizes": {
+        "options": {
             "textToPath": true
         }
     },
