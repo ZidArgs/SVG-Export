@@ -1,15 +1,15 @@
 {
-  "name": "svg",
-  "version": "0.0.1",
-  "description": "emotes for tashatales",
+  "name": "@zidargs/svg-export",
+  "version": "0.1.0",
+  "description": "SVG exporter utilizing the local installation of Inkscape",
   "author": "Denis Weiß (ZidArgs)",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/zidargs/ufc-svg.git"
+    "url": "git+ssh://git@github.com:ZidArgs/SVG-Export.git"
   },
-  "homepage": "https://bitbucket.org/zidargs/ufc-svg/src",
-  "main": "convert.js",
+  "homepage": "https://github.com/ZidArgs/SVG-Export",
+  "main": "svg_export.js",
   "type": "module",
   "devDependencies": {
     "@babel/core": "^7.28.4",
