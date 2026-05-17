@@ -1,16 +1,12 @@
 import fs from "fs";
 import path from "path";
-import {
-    exec
-} from "child_process";
+import {exec} from "child_process";
 
 const ENV_PATTERN = /^%.*%$/;
 const TEMPLATE_PLACEHOLDER = /\$\{(.*?)\}/;
 const __DIR__ = path.resolve("./");
 
-const COMMANDS = {
-    "textToPath": "--export-text-to-path"
-};
+const COMMANDS = {"textToPath": "--export-text-to-path"};
 
 // default config
 const DEFAULT_CONFIG = {
@@ -133,7 +129,8 @@ function convertToSVG(sourcePath, targetPath, outputTemplate, options) {
                     }
                     resolve();
                     return;
-                });
+                }
+            );
         }
     });
 }
@@ -143,7 +140,10 @@ function convertFile(sourcePath, targetPath, outputTemplate, type, sizes, option
     const srcMTime = sourceStat.mtime.valueOf();
     const basename = path.basename(sourcePath, ".svg");
     const promises = [];
-    for (const {w = 0, h = 0} of sizes) {
+    for (const {
+        w = 0,
+        h = 0
+    } of sizes) {
         promises.push(new Promise((resolve) => {
             if (w <= 0 || h <= 0) {
                 resolve();
@@ -193,7 +193,8 @@ function convertFile(sourcePath, targetPath, outputTemplate, type, sizes, option
                         }
                         resolve();
                         return;
-                    });
+                    }
+                );
             }
         }));
     }
@@ -216,7 +217,10 @@ async function convertFiles(currentPath, sources, targetPath, outputFilename, ty
 }
 
 async function convertWithTextIteration(sourcePath, targetPath, type, sizes, textIteration, options) {
-    const {token, texts} = textIteration;
+    const {
+        token,
+        texts
+    } = textIteration;
     if (typeof token === "string" && Array.isArray(texts)) {
         const tokenRegExp = new RegExp(token, "g");
         const sourceStat = fs.lstatSync(sourcePath);
