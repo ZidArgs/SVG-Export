@@ -44,6 +44,12 @@ const CONFIG = (function() {
     }
 })();
 
+console.log("~~ SVG-Export by ZidArgs ~~");
+if (CONFIG.demoMode) {
+    console.log("<<<< running in demo mode >>>>");
+}
+console.log("--------------------------------------");
+
 function applyTemplate(text, values) {
     let match;
     while ((match = TEMPLATE_PLACEHOLDER.exec(text)) != null) {
@@ -349,3 +355,5 @@ async function searchFolderRecursive(currentPath) {
 }
 
 await searchFolderRecursive(CONFIG.sourceFolder);
+
+console.log("--------------------------------------");

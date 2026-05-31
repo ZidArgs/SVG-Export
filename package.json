@@ -1,6 +1,6 @@
 {
   "name": "@zidargs/svg-export",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "SVG exporter utilizing the local installation of Inkscape",
   "author": "Denis Weiß (ZidArgs)",
   "private": true,
@@ -9,7 +9,7 @@
     "url": "git+ssh://git@github.com:ZidArgs/SVG-Export.git"
   },
   "homepage": "https://github.com/ZidArgs/SVG-Export",
-  "main": "svg_export.js",
+  "main": "index.js",
   "type": "module",
   "devDependencies": {
     "@babel/core": "^7.28.4",
@@ -19,9 +19,11 @@
     "@stylistic/eslint-plugin": "^5.6.1",
     "eslint": "^9.35.0"
   },
+  "bin": {
+    "svg-export": "./index.js"
+  },
   "scripts": {
     "lint": "yarn eslint .",
-    "lintfix": "yarn eslint --fix .",
-    "export": "node svg_export.js"
+    "lintfix": "yarn eslint --fix ."
   }
 }
