@@ -1,6 +1,6 @@
 {
   "name": "@zidargs/svg-export",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "SVG exporter utilizing the local installation of Inkscape",
   "author": "Denis Weiß (ZidArgs)",
   "private": true,

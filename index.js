@@ -346,7 +346,7 @@ async function searchFolderRecursive(currentPath) {
         for (const file of files) {
             const nextPath = path.join(currentPath, file);
             if (fs.lstatSync(nextPath).isDirectory()) {
-                searchFolderRecursive(nextPath);
+                await searchFolderRecursive(nextPath);
             } else if (file === ".export.json") {
                 await executeExport(nextPath, currentPath);
             }
